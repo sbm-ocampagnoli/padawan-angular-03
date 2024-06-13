@@ -8,7 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class CartaoComponent implements OnInit {
   @Input() titulo = '';
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }
