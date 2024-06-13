@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { environment } from 'src/environments/environment.prod';
+import { environment } from 'src/environments/environment';
 
 const API = environment.apiURL;
 
@@ -25,7 +25,7 @@ export class AnimalComponent implements OnInit {
     return this.urlOriginal;
   }
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void { }
+  ngOnInit(): void {}
 }
