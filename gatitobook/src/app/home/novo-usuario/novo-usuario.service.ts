@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { NovoUsuario } from './novo-usuario';
 import { environment } from 'src/environments/environment';
+import { NovoUsuario } from './novo-usuario';
 
 const API = environment.apiURL;
 
@@ -9,7 +9,7 @@ const API = environment.apiURL;
   providedIn: 'root',
 })
 export class NovoUsuarioService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   cadastraNovoUsuario(novoUsuario: NovoUsuario) {
     return this.http.post(`${API}/user/signup`, novoUsuario);
