@@ -11,7 +11,7 @@ import { TokenService } from './token.service';
 
 @Injectable()
 export class AutenticacaoInterceptor implements HttpInterceptor {
-  constructor(private tokenService: TokenService) { }
+  constructor(private tokenService: TokenService) {}
 
   intercept(
     request: HttpRequest<unknown>,
@@ -22,6 +22,7 @@ export class AutenticacaoInterceptor implements HttpInterceptor {
       const headers = new HttpHeaders().append('x-access-token', token);
       request = request.clone({ headers });
     }
-    return next.handle(request); // continua a requisição
+
+    return next.handle(request);
   }
 }

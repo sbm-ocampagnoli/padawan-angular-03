@@ -9,7 +9,7 @@ import { Animais } from '../animais';
 export class GradeFotosAnimaisComponent implements OnInit {
   @Input() animais!: Animais;
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 }

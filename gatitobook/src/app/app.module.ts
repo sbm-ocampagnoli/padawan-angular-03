@@ -21,4 +21,4 @@ import { AutenticacaoModule } from './autenticacao/autenticacao.module';
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
