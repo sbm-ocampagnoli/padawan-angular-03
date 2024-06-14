@@ -22,4 +22,4 @@ import { SharedModule } from '../shared/shared.module';
   ],
   imports: [CommonModule, AnimaisRoutingModule, CartaoModule, SharedModule],
 })
-export class AnimaisModule { }
+export class AnimaisModule {}
