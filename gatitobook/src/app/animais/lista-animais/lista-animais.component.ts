@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Animais } from '../animais';
-import { UsuarioService } from 'src/app/autenticacao/usuario/usuario.service';
-import { AnimaisService } from '../animais.service';
-import { switchMap } from 'rxjs/operators';
 import { Observable } from 'rxjs';
+import { switchMap } from 'rxjs/operators';
+import { UsuarioService } from 'src/app/autenticacao/usuario/usuario.service';
+import { Animais } from '../animais';
+import { AnimaisService } from '../animais.service';
 
 @Component({
   selector: 'app-lista-animais',
@@ -16,7 +16,7 @@ export class ListaAnimaisComponent implements OnInit {
   constructor(
     private usuarioService: UsuarioService,
     private animaisService: AnimaisService
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.animais$ = this.usuarioService.retornaUsuario().pipe(

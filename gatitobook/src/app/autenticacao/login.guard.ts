@@ -15,7 +15,8 @@ import { UsuarioService } from './usuario/usuario.service';
   providedIn: 'root',
 })
 export class LoginGuard implements CanLoad {
-  constructor(private usuarioService: UsuarioService, private router: Router) { }
+  constructor(private usuarioService: UsuarioService, private router: Router) {}
+
   canLoad(
     route: Route,
     segments: UrlSegment[]
@@ -24,11 +25,11 @@ export class LoginGuard implements CanLoad {
     | Promise<boolean | UrlTree>
     | boolean
     | UrlTree {
-    if (!this.usuarioService.estaLogado()) {
+    if (this.usuarioService.estaLogado()) {
       this.router.navigate(['animais']);
       return false;
-    } else {
-      return true;
     }
+
+    return true;
   }
 }
