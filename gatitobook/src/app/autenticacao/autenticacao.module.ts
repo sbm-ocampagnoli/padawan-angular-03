@@ -14,4 +14,4 @@ import { AutenticacaoInterceptor } from './autenticacao.interceptor';
     },
   ],
 })
-export class AutenticacaoModule { }
+export class AutenticacaoModule {}
