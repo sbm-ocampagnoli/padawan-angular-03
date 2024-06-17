@@ -10,16 +10,15 @@ const API = environment.apiURL;
   providedIn: 'root',
 })
 export class ComentariosService {
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   buscaComentario(id: number): Observable<Comentarios> {
     return this.http.get<Comentarios>(`${API}/photos/${id}/comments`);
   }
 
   incluiComentario(id: number, commentText: string): Observable<Comentario> {
-    return this.http.post<Comentario>(
-      `${API}/photos/${id}/commments`,
-      commentText
-    );
+    return this.http.post<Comentario>(`${API}/photos/${id}/comments`, {
+      commentText,
+    });
   }
 }

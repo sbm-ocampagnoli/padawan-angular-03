@@ -6,10 +6,10 @@ import {
   ActivatedRouteSnapshot,
 } from '@angular/router';
 import { Observable, of } from 'rxjs';
-import { AnimaisService } from '../animais.service';
+import { switchMap, take } from 'rxjs/operators';
 import { UsuarioService } from 'src/app/autenticacao/usuario/usuario.service';
 import { Animais } from '../animais';
-import { switchMap, take } from 'rxjs/operators';
+import { AnimaisService } from '../animais.service';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +18,7 @@ export class ListaAnimaisResolver implements Resolve<Animais> {
   constructor(
     private animaisService: AnimaisService,
     private usuarioService: UsuarioService
-  ) { }
+  ) {}
 
   resolve(
     route: ActivatedRouteSnapshot,
